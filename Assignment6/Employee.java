@@ -1,37 +1,20 @@
-package com.sunbeam.ass6;
+package com.sunbeam.app;
 
 public abstract class Employee {
-	int impid;
-	String firstName;
-	String lastName;
-	public int getImpid() {
-		return impid;
-	}
-	public void setImpid(int impid) {
-		this.impid = impid;
-	}
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public Employee(int impid, String firstName, String lastName) {
-	
-		this.impid = impid;
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-	
-	public abstract void calculateSal();
-	
-	
-	
+    protected String name;
+    protected double earnings;
 
+    public Employee(String name) {
+        this.name = name;
+    }
+    public String getName() {
+		return name;
+	}
+  
+    public abstract void calculateEarnings();
+
+    public void displayDetails() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Earnings: $" + earnings);
+    }
 }
